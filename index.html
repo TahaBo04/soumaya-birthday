@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff6f1">
+  <title>Happy Birthday, Soumaya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-field" id="ambientField" aria-hidden="true"></div>
+
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Back to home">
+      <span class="brand-mark">S</span>
+      <span>Soumaya's day</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#books">Books</a>
+      <a href="#gallery">Pictures</a>
+      <a href="#games">Games</a>
+      <a href="#memories">Memories</a>
+      <a href="#music">Music</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner reveal">
+        <p class="eyebrow">May 5, 2026</p>
+        <h1>Happy birthday, my 7biba.</h1>
+        <p class="hero-copy" data-typewriter>
+          Today is not just your birthday, baby. It is the day the world received the soul that would one day become my peace, my softness, my favorite person, and my home.
+        </p>
+        <p class="hero-note">
+          This little website is a small piece of everything I feel for you: the books, the memories, the games, the songs, and the love I will keep choosing every day.
+        </p>
+        <div class="hero-actions" aria-label="Birthday sections">
+          <a class="button primary" href="#books">Open the books</a>
+          <a class="button" href="#gallery">See the pictures</a>
+          <a class="button" href="#games">Play together</a>
+          <a class="button" href="#memories">Read the memories</a>
+          <a class="button" href="#music">Play our song</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band">
+      <div class="section-heading reveal">
+        <p class="kicker">From Taha</p>
+        <h2>A soft little birthday world</h2>
+        <p>
+          A calm place for the things we made, honey, the moments we want to keep, and the tiny surprises waiting for you.
+        </p>
+      </div>
+      <div class="mini-grid" aria-label="Website highlights">
+        <article class="mini-card reveal">
+          <span class="mini-icon">01</span>
+          <h3>Books</h3>
+          <p>The words I wrote for you, gathered in one gentle shelf.</p>
+        </article>
+        <article class="mini-card reveal">
+          <span class="mini-icon">02</span>
+          <h3>Pictures</h3>
+          <p>Frames from our gallery, now kept separate from the written memories.</p>
+        </article>
+        <article class="mini-card reveal">
+          <span class="mini-icon">03</span>
+          <h3>Games</h3>
+          <p>Small interactive surprises made to make you smile.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pale" id="books">
+      <div class="section-heading reveal">
+        <p class="kicker">Our books</p>
+        <h2>The little library I made for you</h2>
+        <p>Each book can be opened here or saved for later.</p>
+      </div>
+      <div class="book-grid" id="booksGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-heading reveal">
+        <p class="kicker">Pictures</p>
+        <h2>Our gallery, in its own place</h2>
+        <p>A place for the little scenes that still make my heart pause.</p>
+      </div>
+      <div class="filter-row" id="galleryFilters" aria-label="Gallery categories"></div>
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section blush" id="games">
+      <div class="section-heading reveal">
+        <p class="kicker">Tiny games</p>
+        <h2>Five cute things to open and play</h2>
+          <p>Light little surprises for a birthday smile, 7biba.</p>
+      </div>
+
+      <div class="games-grid">
+        <article class="game-card reveal" id="loveQuizCard">
+          <div class="game-card-header">
+            <p class="game-label">Game 1</p>
+            <h3>Love Quiz</h3>
+          </div>
+          <div class="quiz-area" id="quizArea"></div>
+        </article>
+
+        <article class="game-card reveal" id="memoryGameCard">
+          <div class="game-card-header">
+            <p class="game-label">Game 2</p>
+            <h3>Memory Cards</h3>
+          </div>
+          <div class="memory-stats">
+            <span id="memoryMoves">0 moves</span>
+            <button class="small-button" id="resetMemory">Reset</button>
+          </div>
+          <div class="memory-board" id="memoryBoard" aria-label="Memory matching cards"></div>
+        </article>
+
+        <article class="game-card reveal wheel-card" id="loveWheelCard">
+          <div class="game-card-header">
+            <p class="game-label">Game 3</p>
+            <h3>Spin the Love Wheel</h3>
+          </div>
+          <div class="wheel-wrap">
+            <div class="wheel-pointer" aria-hidden="true"></div>
+            <div class="love-wheel" id="loveWheel" aria-hidden="true">
+              <span>Promise</span>
+              <span>Date</span>
+              <span>Kiss</span>
+              <span>Note</span>
+              <span>Song</span>
+              <span>Dream</span>
+            </div>
+          </div>
+          <button class="button primary full" id="spinWheel">Spin</button>
+          <p class="result-text" id="wheelResult">A little surprise is waiting.</p>
+        </article>
+
+        <article class="game-card reveal" id="lettersCard">
+          <div class="game-card-header">
+            <p class="game-label">Game 4</p>
+            <h3>Open When Letters</h3>
+          </div>
+          <div class="letter-list" id="lettersList"></div>
+        </article>
+
+        <article class="game-card reveal surprise-card" id="surpriseCard">
+          <div class="game-card-header">
+            <p class="game-label">Game 5</p>
+            <h3>Birthday Surprise Button</h3>
+          </div>
+          <p class="surprise-message" id="surpriseMessage">Press whenever you want a tiny birthday note.</p>
+          <button class="button primary full" id="surpriseButton">Reveal a note</button>
+          <div class="surprise-count" id="surpriseCount">0 notes opened</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="memories">
+      <div class="section-heading reveal">
+        <p class="kicker">Memories from the books</p>
+        <h2>The story inside the pages</h2>
+        <p>Key moments gathered from the books, kept here as words instead of pictures.</p>
+      </div>
+      <div class="memory-notes-grid" id="bookMemories"></div>
+      <div class="section-heading small reveal">
+        <p class="kicker">Timeline</p>
+        <h2>How the story keeps unfolding</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section music-section" id="music">
+      <div class="section-heading reveal">
+        <p class="kicker">Our songs</p>
+        <h2>Play our song softly</h2>
+        <p>Choose one when the moment feels right.</p>
+      </div>
+      <div class="music-player reveal">
+        <div class="track-list" id="trackList" aria-label="Song list"></div>
+        <div class="player-panel">
+          <p class="now-playing" id="nowPlaying">Choose a song</p>
+          <audio id="audioPlayer" controls preload="none"></audio>
+          <button class="button primary" id="playSelected">Play our song</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made by Taha for his baby, with every soft thing I know how to give.</p>
+    <a href="#home">Back to the beginning</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery image">&times;</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-label="Open when letter" hidden>
+    <button class="lightbox-close" id="letterClose" aria-label="Close letter">&times;</button>
+    <article class="letter-modal-card">
+      <p class="kicker">Open when</p>
+      <h2 id="letterModalTitle"></h2>
+      <p id="letterModalText"></p>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
